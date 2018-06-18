@@ -23,6 +23,9 @@ class HangmanContainer extends PureComponent {
 
   render() {
     const currentWord = this.props.wordToGuess
+
+    if(currentWord === undefined) return
+    
     const currentGuesses = this.props.guesses
     const faultCount = wrongGuessCount(currentWord, currentGuesses)
     const wordSeen = showGuess(currentWord, currentGuesses)

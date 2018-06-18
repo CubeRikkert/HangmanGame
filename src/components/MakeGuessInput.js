@@ -7,6 +7,7 @@ class MakeGuessInput extends React.PureComponent {
 
   handleSubmit(event) {
     event.preventDefault()
+    console.log('Hello')
     const guess = this.refs.guess.value
     this.props.makeGuess(guess)
     document.getElementById("guessForm").reset()
